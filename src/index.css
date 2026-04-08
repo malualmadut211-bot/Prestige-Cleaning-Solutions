@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", "Lora", ui-serif, Georgia, serif;
+  --font-body: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Syne", "Montserrat", sans-serif;
+  
+  --color-navy-900: #0A1128;
+  --color-navy-800: #1E3A5F;
+  --color-navy-700: #1A2B4A;
+  --color-navy-600: #1a365d;
+  --color-navy-500: #2d5a8f;
+  
+  --color-gold-600: #C5A572;
+  --color-gold-500: #D4AF37;
+  --color-gold-400: #F4E5A5;
+  --color-gold-300: #F0D885;
+
+  --color-cyan-500: #4A9B9B;
+  --color-cyan-400: #5CE1E6;
+  
+  --color-silver-400: #C0C0C0;
+  
+  --color-offwhite: #F8F9FA;
+  --color-lightgray: #F5F5F5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body text-gray-800 bg-offwhite;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-navy-900;
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(12deg);
+    }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+  }
+  @keyframes whatsappSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  @keyframes phoneShake {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30%, 50%, 70%, 90% { transform: rotate(-15deg); }
+    20%, 40%, 60%, 80% { transform: rotate(15deg); }
+  }
+  @keyframes pinBounce {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-6px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-3px); }
+  }
+  @keyframes emailFly {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-12px) rotate(-10deg); opacity: 0.8; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  }
+  @keyframes clockTick {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes pinDrop {
+    0% { transform: translateY(-200px) scale(0.5); opacity: 0; }
+    60% { transform: translateY(10px) scale(1.1); opacity: 1; }
+    80% { transform: translateY(-5px) scale(0.95); opacity: 1; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  @keyframes pinPulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+}
