@@ -114,7 +114,7 @@ export default function HeroSection() {
   const brandValues = ["Reliable.", "Discreet.", "Structured."];
 
   return (
-    <section ref={containerRef} className="relative w-full min-h-screen overflow-hidden bg-navy-900 text-white selection:bg-cyan-500/30 font-sans mb-12 md:mb-24">
+    <section ref={containerRef} className="relative w-full min-h-screen overflow-hidden bg-navy-900 text-white selection:bg-cyan-500/30 font-sans pb-12 md:pb-24">
       
       {/* --- Phase 1: Background Genesis --- */}
       <motion.div style={{ y: yBg, opacity: opacityBg }} className="absolute inset-0 z-0">
