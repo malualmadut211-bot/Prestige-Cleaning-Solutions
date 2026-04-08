@@ -304,7 +304,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 3.0, type: "spring", bounce: 0.4 }}
             className="flex flex-col sm:flex-row gap-6 items-start sm:items-center"
           >
-            <MagneticButton href="/quote" className="group rounded-full shadow-[0_15px_40px_rgba(212,175,55,0.4)] hover:shadow-[0_25px_70px_rgba(212,175,55,0.7),_0_0_40px_rgba(212,175,55,0.4)] transition-all duration-400">
+            <MagneticButton href="/contact" className="group rounded-full shadow-[0_15px_40px_rgba(212,175,55,0.4)] hover:shadow-[0_25px_70px_rgba(212,175,55,0.7),_0_0_40px_rgba(212,175,55,0.4)] transition-all duration-400">
               <div className="relative px-8 py-4 bg-gradient-to-br from-gold-500 to-[#FFD700] rounded-full overflow-hidden group-hover:-translate-y-1 transition-transform duration-400">
                 {/* Continuous Shimmer */}
                 <motion.div 
